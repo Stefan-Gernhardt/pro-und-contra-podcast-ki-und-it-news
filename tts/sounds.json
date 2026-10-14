@@ -1,0 +1,12 @@
+{
+  "_hinweis": "Zuordnung der Regie-Jingles zu den Dateien in sounds/. Pfade relativ zum Projektordner. Optional je Eintrag: start/laenge (Sekunden, zum Zuschneiden), fade_in/fade_out (Sekunden), lufs (Lautheit; Sprache liegt bei -16). Der Teppich läuft leise unter der Sprache ab [Übergangs-Jingle, ruhiger Musikteppich] bis in den Outro-Jingle hinein.",
+
+  "intro_sound":     {"datei": "sounds/intro sound/Intro Sound For Podcast It News And Ai News.mp3", "lufs": -18},
+  "intro":           {"datei": "sounds/intro sound/Intro Sound For Podcast It News And Ai News.mp3", "lufs": -18},
+  "uebergang":       {"datei": "sounds/Ueberangsjingle/Transition Jingle For Podcast It News And Ai News.mp3", "lufs": -18},
+  "uebergang_lang":  {"datei": "sounds/Ueberangsjingle/Transition Jingle For Podcast It News And Ai News 02.mp3", "fade_out": 2.0, "lufs": -19},
+  "uebergang_ruhig": {"datei": "sounds/Ueberangsjingle/Transition Jingle For Podcast It News And Ai News.mp3", "lufs": -18},
+  "outro":           {"datei": "sounds/outro sound/Outro Sound For Podcast It News And Ai News.mp3", "lufs": -18},
+
+  "teppich":         {"datei": "sounds/ruhiger Musikteppich/KlangTeppichPodcast.mp3", "fade_in": 3.0, "fade_out": 4.0, "lufs": -34}
+}

@@ -1,0 +1,43 @@
+# Zugangsdaten: nie ins Repo (in der Cloud kommen sie als Secrets)
+*api_key*.txt
+*.env
+.dev.vars
+*token*.txt
+
+# Große Dateien und Zwischenstände
+download/
+tts/out/
+tts/cache/
+tts/models/
+tts/moss-tts-src/
+09 Folgen/
+web/public/
+.wrangler/
+web/node_modules/
+__pycache__/
+*.pyc
+
+# Audio und Video: Folgen liegen live auf Cloudflare, Fassungen lokal in 09 Folgen
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.mp4
+*.mov
+tts/.venv*/
+tts/voices/
+
+# Ausnahme: Jingles und Musikteppich braucht das Rendern (tts/sounds.json)
+!sounds/**/*.mp3
+!sounds/**/*.wav
+
+# Ausnahme: Stimmvorlagen und ElevenLabs-Stimm-IDs braucht das Rendern in der Cloud-Routine
+!tts/voices/
+tts/voices/*
+!tts/voices/aktuell/
+tts/voices/aktuell/*
+!tts/voices/aktuell/sommer.wav
+!tts/voices/aktuell/mondschein.wav
+!tts/voices/kandidaten/
+tts/voices/kandidaten/*
+!tts/voices/kandidaten/elevenlabs/

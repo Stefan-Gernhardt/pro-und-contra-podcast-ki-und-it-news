@@ -1,0 +1,174 @@
+PRO UND CONTRA – KI- UND IT-NEWS
+Wo der Podcast überall liegt und angemeldet ist
+Stand: 5. Oktober 2026
+
+
+1. STAMMDATEN
+
+Titel:        Pro und Contra – KI- und IT-News
+Autor:        Herr Sommer & Herr Mondschein (im Feed und bei den Anbietern)
+Webseite:     https://pro-und-contra-ki-und-it-news.pages.dev/
+RSS-Feed:     https://pro-und-contra-ki-und-it-news.pages.dev/feed.xml
+Kontakt:      peterschmidtshopping@gmail.com (steht nur im Feed als Besitzer, nicht auf der Webseite)
+Erscheinen:   wöchentlich
+Folgen:       Folge 1 vom 27.09.2026, Folge 2 vom 04.10.2026
+Quelle:       web\podcast.json (Titel, Beschreibung, Adressen) und web\folgen\<datum>.json (je Folge)
+
+
+2. HOSTING BEI CLOUDFLARE (die Quelle für alles außer Spotify)
+
+Konto: das Cloudflare-Konto zur Gmail-Adresse oben.
+
+- Pages-Projekt „pro-und-contra-ki-und-it-news“
+  Webseite, Feed, MP3s (80 kbit/s), Cover, Kapitel, Transkripte.
+  Dort liegt auch der Werbespot: /werbung/spot_zwei_meinungen.mp4 (nicht verlinkt, aber öffentlich abrufbar).
+- Worker „pro-und-contra“
+  Alte Adresse https://pro-und-contra.peterschmidtshopping.workers.dev – leitet nur noch auf die Pages-Adresse weiter.
+- D1-Datenbank „pro-und-contra-zaehler“ (ID 89e925a9-3d08-46a4-a716-f6a830b9518d)
+  Zähler der Webseite: Aufrufe und Hör-Klicks je Tag und Herkunft. Nur Summen, keine Daten über Personen.
+
+Veröffentlichen:  python web\veroeffentlichen.py
+Zähler auslesen:  python "08 Werbung\auswertung.py"
+
+
+3. PODCAST-ANBIETER UND VERZEICHNISSE
+
+Spotify
+  Weg:        Direkt-Upload in Spotify for Creators. Den Feed von pages.dev hat Spotify abgelehnt.
+  Konto:      Spotify-Konto „DJ Anubis“
+  Öffentlich: https://open.spotify.com/show/2My6tc6I0SxsPesCtGezfx
+  Verwaltung: https://creators.spotify.com/pod/show/2My6tc6I0SxsPesCtGezfx/
+  Neue Folge: von Hand hochladen (siehe Abschnitt 5)
+  Kommentare: abgeschaltet (Schalter der Show)
+  Urheber:    „Herr Sommer und Herr Mondschein“ (mit „&“ zeigte Spotify „&amp;“ an; geändert am 06.10.2026)
+
+Apple Podcasts
+  Weg:        über den RSS-Feed, neue Folgen kommen von selbst
+  Konto:      Apple Account, in Podcasts Connect als „Pro und Contra Podcast“ (Einzelperson)
+  Öffentlich: https://podcasts.apple.com/de/podcast/pro-und-contra-ki-und-it-news/id6819064561
+  Verwaltung: https://podcastsconnect.apple.com  (Sendungs-ID a8f2db4b-c030-4b0d-a1d4-12a61014751c, Apple-ID 6819064561)
+  Kommentare: Bewertungen und Rezensionen lassen sich dort nicht abschalten
+
+podcast.de
+  Weg:        über den RSS-Feed, eingetragen am 05.10.2026, ohne Konto
+  Öffentlich: https://www.podcast.de/podcast/3765327/pro-und-contra-ki-und-it-news
+  Kommentare: Es gibt einen Kommentarbereich für angemeldete Nutzer. Einen Schalter dagegen habe ich nicht gefunden.
+  Offen:      „Podcast aneignen“ (Eintrag an ein eigenes Konto binden) ist nicht gemacht.
+
+fyyd
+  Weg:        über den RSS-Feed, angemeldet am 05.10.2026 unter https://fyyd.de/add-feed, ohne Konto
+  Status:     angenommen, wird von fyyd noch geprüft; eine eigene Adresse gibt es erst danach (am 07.10. noch nicht auffindbar)
+
+Podcast Index
+  Weg:        über den RSS-Feed, angemeldet am 05.10.2026 unter https://podcastindex.org/add, ohne Konto
+  Status:     Feed-Nummer 8058732 ist vergeben, aber die Seite war am 05.10. noch leer und die Suche fand nichts.
+  Prüfen:     https://podcastindex.org/podcast/8058732  (E-Mail an info@podcastindex.org am 07.10.2026 geschickt; am 07.10. noch „Unknown podcast ID“)
+              Bleibt sie leer: E-Mail mit der Feed-Adresse an info@podcastindex.org
+
+YouTube (Kanal angelegt am 05.10.2026, Feed eingereicht und Podcast veröffentlicht am 07.10.2026)
+  Konto:      eigenes Google-Konto, eigener Kanal (Brand Account) neben Anubis, Anubis Gott, DJ Anubis
+  Öffentlich: https://www.youtube.com/@proundcontra-ki-it-news
+  Podcast:    https://www.youtube.com/playlist?list=PLVx2-b_2jnI4  (Button „Auf YouTube anhören“ auf der Webseite)
+  Verwaltung: https://studio.youtube.com/channel/UCppKYl3M5QzC5TST5fgZe_w
+              (studio.youtube.com ohne Kanal-ID öffnet „Anubis Gott“)
+  Kanal-ID:   UCppKYl3M5QzC5TST5fgZe_w
+  Kommentare: aus (Einstellungen → Community-Moderation → Kommentare bei neuen Videos: Aus;
+              Upload-Standard ebenfalls Aus)
+  Weg:        über den RSS-Feed (Inhalte → Podcasts → Neuer Podcast → RSS-Feed einreichen),
+              eingereicht am 07.10.2026. Voraussetzung waren die „erweiterten Funktionen“
+              (Video-Bestätigung vom 05.10.2026). Neue Folgen kommen von selbst als Videos.
+  Stand:      Podcast am 07.10.2026 vom Nutzer veröffentlicht, Folge 1 und 2 sind öffentlich.
+
+Ohne eigene Anmeldung dabei
+  Apps wie Overcast, Castro und Castbox lesen aus dem Apple-Verzeichnis, AntennaPod sucht zusätzlich
+  in Podcast Index und fyyd. Dort gibt es keinen eigenen Eintrag und nichts zu verwalten.
+
+Noch nicht angemeldet
+  Amazon Music (samt Audible und Alexa), Deezer.
+
+
+4. SOZIALE MEDIEN UND WERBUNG
+
+Facebook-Seite „Pro und Contra KI und IT-News“
+  https://www.facebook.com/profile.php?id=61594745176881
+  Verwaltet über das persönliche Facebook-Profil. Kommentare lassen sich nur je Beitrag einschränken.
+
+TikTok-Konto „Pro & Contra Podcast“ (@pro.contra.podcast)
+  Mit dem Business Center „BusisnessCenterAnubis“ (7596324797861314561) verknüpft, damit die Anzeige unter diesem Namen läuft.
+
+Meta-Werbung (privates Werbekonto 1096619309418965)
+  Kampagne „Pro und Contra Podcast - Traffic 2026-10“ (120251554069930004), 50 €, bis 11.10.2026 21:27 Uhr
+  Anzeigengruppe 120251554069940004, Anzeige 120251554069950004, nur Facebook Stories und Instagram Stories
+  Im EU-Pflichtfeld steht als Werbetreibender „Pro und Contra Podcast“.
+  Außerdem: alter, nie veröffentlichter Entwurf im Werbekonto „DJ Anubis Official“ (680713148288503), Kampagne 120249840668270760.
+
+TikTok-Werbung (Werbekonto „DJAnubis0811“, 7401895778731524113)
+  Kampagne „Pro und Contra Podcast - Traffic 2026-10“ (1878146434374962), 50 €, bis 11.10.2026 22:40 Uhr
+  Anzeigengruppe 1878146438436002, Anzeige 1878150421568849, Kommentare aus
+  Zwei ältere Anzeigen (1878148277819506, 1878148363353137) sind abgeschaltet.
+
+Der Spot liegt als Video auch in den Medienbibliotheken beider Werbekonten.
+
+
+5. BEI JEDER NEUEN FOLGE
+
+1. Seite und Feed veröffentlichen: python web\veroeffentlichen.py
+   Apple Podcasts, podcast.de, fyyd und Podcast Index holen die Folge danach von selbst aus dem Feed.
+2. Spotify: Ab Folge 3 lädt Claude die Folge in Spotify for Creators hoch (Wunsch vom 08.10.2026).
+   python web\veroeffentlichen.py --spotify <datum> gibt Titel und Beschreibung mit Kapitelmarken aus und erzeugt
+   09 Folgen\<datum>\spotify\<datum>_spotify.mp3 (MP3 mono, 32 kbit/s, unter 10 MB; der Browser-Upload endet bei 10 MB).
+   Folge 1 und 2 liegen bei Spotify mit 160 kbit/s und bleiben so.
+   In der Übersicht prüfen, dass bei „Kommentare“ „Aus“ steht.
+3. Facebook: Nur wenn jemand auf der Seite einen Beitrag postet (Folgen werden dort nicht hochgeladen),
+   bei diesem Beitrag die Kommentare von Hand einschränken.
+4. YouTube: Die Folge kommt von selbst aus dem Feed (Studio → Inhalte → Podcasts). Danach je Video:
+   - Kommentare aus
+   - KI-Kennzeichnung „Veränderte oder synthetische Inhalte: Ja“ (KI-Stimmen)
+   - Untertitel: Studio → Untertitel → Video → Sprache Deutsch → Datei hochladen → „Mit Zeitangaben“,
+     Datei web\public\transkript\<datum>.vtt (genauer als YouTubes automatische Untertitel)
+   - Kapitel: kommen aus den Zeitmarken „00:00 Titel“ in der Beschreibung; im Video prüfen.
+
+
+6. WENN DER PODCAST GELÖSCHT WERDEN SOLL
+
+Reihenfolge: erst Werbung, dann Anbieter, das Hosting zuletzt. Die Verzeichnisse lesen den Feed;
+verschwindet er zuerst, bleiben dort Einträge stehen, deren Folgen nicht mehr spielen.
+Die genauen Menüwege bei den Anbietern habe ich nicht geprüft.
+
+ 1. Meta: Kampagne abschalten oder löschen (und den alten Entwurf in „DJ Anubis Official“).
+ 2. TikTok: Kampagne abschalten oder löschen. Restguthaben bleibt im Werbekonto.
+ 3. Spotify: Show in Spotify for Creators löschen. Spotify hängt nicht am Feed;
+    dort bleibt alles stehen, bis die Show selbst gelöscht ist.
+ 4. Apple Podcasts: Sendung in Podcasts Connect entfernen.
+ 5. podcast.de: kein Konto, also Löschung beim Betreiber anfragen (Kontakt auf der Seite).
+ 6. fyyd: kein Konto, Löschung beim Betreiber anfragen.
+ 7. Podcast Index: Löschung per E-Mail an info@podcastindex.org.
+ 8. Facebook-Seite löschen.
+ 9. TikTok-Konto: Verknüpfung im Business Center lösen, dann das Konto in der App löschen.
+10. Spot-Video aus den Medienbibliotheken von Meta und TikTok entfernen.
+11. Cloudflare, zuletzt:
+    - Pages-Projekt „pro-und-contra-ki-und-it-news“ (Webseite, Feed, MP3s, Spot-Video)
+    - Worker „pro-und-contra“ (die alte Adresse)
+    - D1-Datenbank „pro-und-contra-zaehler“
+12. YouTube: in YouTube Studio des Kanals → Einstellungen → Kanal → Erweiterte Einstellungen →
+    „YouTube-Inhalte entfernen“ (Kanal @proundcontra-ki-it-news, eigenes Google-Konto).
+    Die anderen Kanäle des Kontos sind davon nicht betroffen.
+13. Falls bis dahin angemeldet: Amazon Music, Deezer.
+
+Was man nicht selbst löschen kann: Apps und Suchmaschinen, die den Podcast aus den Verzeichnissen
+übernommen haben. Sie verlieren ihn erst, wenn Apple, Podcast Index und fyyd ihn entfernt haben.
+Wer eine Folge heruntergeladen hat, behält sie.
+
+Dienste aus der Herstellung, in denen auch Material liegt:
+- ElevenLabs: erzeugte Sprachaufnahmen im Verlauf des Kontos
+- Leonardo.ai: das Cover-Bild
+- API-Schlüssel in tts\elevenlabs_api_key.txt und tts\gemini_api_key.txt: beim Anbieter widerrufen, wenn sie nicht mehr gebraucht werden
+- Lokal: dieser Projektordner mit allen Fassungen unter Folgen\
+
+----------------------------------------------
+Google Gemini 3.8 Flash TTS (erst am 23.09.2026 erschienen)
+- Zwei Sprecher in einem Durchgang, genau unser Format.
+- Voice Design per Beschreibung, wie bei Qwen („tiefe, ruhige Stimme …“), und Regieanweisungen pro Sprecherwechsel („flüstert besorgt“, „begeisterter Moderator“).
+- Deutsch ja.
+- Haken beim Klonen: Google verlangt eine gesprochene Einverständniserklärung der Person. Das geht mit unseren erfundenen Stimmen nicht. Man müsste die Stimmen dort neu designen oder fertige Google-Stimmen nehmen.
+

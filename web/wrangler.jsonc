@@ -1,0 +1,19 @@
+{
+  // Öffentliche Podcast-Seite „Pro und Contra – KI- und IT-News“ als Pages-Projekt (pro-und-contra-ki-und-it-news.pages.dev).
+  // Seite, Feed, Cover, Kapitel und Transkripte liegen als statische Dateien in public/ (erzeugt von veroeffentlichen.py),
+  // MP3s: vorerst ebenfalls in public/audio/ (höchstens 25 MiB je Datei), später wahlweise in R2.
+  // functions/audio/[[pfad]].js beantwortet die Range-Anfragen fürs Vorspulen.
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "pro-und-contra-ki-und-it-news",
+  "pages_build_output_dir": "./public",
+  "compatibility_date": "2026-09-28",
+  // Zähler für Seitenaufrufe und Klicks: functions/z.js (Logik in src/zaehler.js), Tabelle in zaehler.sql,
+  // Auswertung mit „08 Werbung/auswertung.py“.
+  "d1_databases": [
+    { "binding": "ZAEHLER", "database_name": "pro-und-contra-zaehler", "database_id": "89e925a9-3d08-46a4-a716-f6a830b9518d" }
+  ]
+  // R2 ist im Konto noch nicht aktiviert; bis dahin liegen die MP3s unter public/audio/.
+  // "r2_buckets": [
+  //   { "binding": "AUDIO", "bucket_name": "pro-und-contra-audio" }
+  // ]
+}

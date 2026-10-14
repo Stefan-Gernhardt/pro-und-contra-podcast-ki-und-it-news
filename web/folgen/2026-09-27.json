@@ -1,0 +1,96 @@
+{
+  "nummer": 1,
+  "youtube": "ae6e0fCHhdQ",
+  "titel": "KI-Halluzination, die Schule in Minab, KI-Einbrecher, KI-Blase und Rechenzentren im All",
+  "kurz": "Ein Chatbot-Bericht bringt das US-Militär beinahe an Bord eines chinesischen Schiffs, die UN legen ihren Bericht zu Minab vor, KI-Agenten brechen für 25 Dollar pro Ziel in Onlineshops ein, eine Studie rechnet die Finanzierung des KI-Ausbaus durch, und Google will Rechenzentren ins All schießen.",
+  "kapitel": [
+    {
+      "text": "Herr Sommer muss etwas gestehen: Seine neue KI-Türklingel hält den Paketboten für einen Bewohner. Dazu der Überblick über die Themen der Woche."
+    },
+    {
+      "text": "Laut CNN hätte das US-Militär beinahe ein chinesisches Schiff geentert. Grundlage war ein falscher Lagebericht, den ein Analyst mit einem KI-Chatbot erstellt hatte. Wer prüft, was die Maschine behauptet? Mit Rückblick auf den Yinhe-Zwischenfall 1993 und Stanislaw Petrow 1983.",
+      "links": [
+        [
+          "CNN: US military had close call after using AI for false intelligence report",
+          "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship"
+        ],
+        [
+          "heise online: Nach KI-Halluzination hätte die US-Armee beinahe ein Schiff aus China geentert",
+          "https://www.heise.de/news/Nach-KI-Halluzination-US-Armee-haette-laut-CNN-beinahe-Schiff-aus-China-geentert-11459513.html"
+        ],
+        [
+          "Kalai et al.: Why Language Models Hallucinate (arXiv)",
+          "https://arxiv.org/abs/2509.04664"
+        ],
+        [
+          "Wikipedia: Yinhe incident",
+          "https://en.wikipedia.org/wiki/Yinhe_incident"
+        ]
+      ]
+    },
+    {
+      "text": "Die UN-Untersuchungsmission zum Iran legt ihren Bericht zum Angriff auf die Schule in Minab vor: veraltete Zieldaten und übergangene Warnhinweise. Welche Rolle spielte KI bei der Zielauswahl, und wer trägt die Verantwortung?",
+      "links": [
+        [
+          "heise online: UN-Bericht – veraltete Zieldaten führten zu US-Angriff auf iranische Schule",
+          "https://www.heise.de/news/UN-Veraltete-Zieldaten-fuer-US-Angriff-auf-iranische-Schule-verantwortlich-11459443.html"
+        ],
+        [
+          "UN News: UN fact-finding mission on Iran focuses on plight of civilians",
+          "https://news.un.org/en/story/2026/09/1168358"
+        ],
+        [
+          "Bloomberg: Inside US Military ‘Kill Chain’ That Destroyed an Iranian School",
+          "https://www.bloomberg.com/graphics/2026-iran-school-attack/"
+        ]
+      ]
+    },
+    {
+      "text": "Gambit Security berichtet: Ein Angreifer ist mit frei verfügbaren KI-Agenten in Dutzende Unternehmen eingedrungen und hat rund 600.000 Kreditkartendaten abgegriffen, für etwa 25 Dollar pro Ziel. Dazu VLC mit über 130 Sicherheitsfixes und eine WordPress-Lücke, die wenige Stunden nach dem Patch angegriffen wurde.",
+      "links": [
+        [
+          "Gambit Security: Autonomous AI Agents are breaking into hundreds of Online Retailers for $25 a target",
+          "https://gambit.security/blog-posts/autonomous-ai-agents-online-retailers-25-a-company"
+        ],
+        [
+          "heise online: Angriff mit KI-Agenten auf hunderte Shops",
+          "https://www.heise.de/news/Angriff-mit-KI-Agenten-auf-hunderte-Shops-600-000-Kreditkartendaten-geklaut-11464492.html"
+        ],
+        [
+          "BleepingComputer: Malicious AI agents steal 600K credit cards",
+          "https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/"
+        ]
+      ]
+    },
+    {
+      "text": "Stijn Van Nieuwerburgh rechnet vor, wie der KI-Ausbau in den USA finanziert wird: über Jahre rund 3,6 Prozent der Wirtschaftsleistung. Rechnet sich das, oder wiederholt sich die Dotcom-Blase? Mit Seitenblicken auf Pets.com und die Railway Mania.",
+      "links": [
+        [
+          "Brookings: Financing the AI buildout",
+          "https://www.brookings.edu/articles/financing-the-ai-buildout/"
+        ],
+        [
+          "heise online: KI-Umsatz in den USA müsste für Refinanzierung jährlich um 80 % steigen",
+          "https://www.heise.de/news/Analyse-In-KI-Ausbau-der-USA-fliessen-ueber-Jahre-3-6-des-Bruttoinlandsprodukts-11464568.html"
+        ]
+      ]
+    },
+    {
+      "text": "Google will mit Project Suncatcher Rechenzentren in den Orbit bringen, der erste Testflug ist für den 1. Oktober geplant. Sonnenstrom fast rund um die Uhr, aber wie kühlt man im All? Und was lehren Iridium und Teledesic?",
+      "links": [
+        [
+          "Google: Behind Project Suncatcher, our moonshot to put AI in space",
+          "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/"
+        ],
+        [
+          "Suncatcher-Paper (arXiv 2511.19468)",
+          "https://arxiv.org/abs/2511.19468"
+        ]
+      ]
+    },
+    {
+      "text": "Sommers Sonnenseite, Mondscheins Nachtgedanke und die Verabschiedung."
+    }
+  ],
+  "veroeffentlicht": "2026-09-28T09:59:30+00:00"
+}

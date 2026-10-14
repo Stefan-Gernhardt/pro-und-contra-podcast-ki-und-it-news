@@ -1,0 +1,43 @@
+Der Podcast proUndContraKIundITnews ist ein Zwiegespräch zwischen den beiden Moderatoren Sommer und Mondschein. Herr Sommer nimmt immer die Pro Position ein und Herr Mondschein immer die Contra Position.
+
+----------------------------------------------
+Step 1: Sammle Nachrichten zum Thema KI und IT
+
+Ich möchte dass du dir die Themen der letzten 7 Tage vornimmst und in eine Datei schreibst "01 Collect Topics" die Datei hat das Datum von heute die Themen gehen von heute 7 Tage zurück https://www.heise.de/rss/heise-top-atom.xml und https://www.heise.de/thema/Kuenstliche-Intelligenz.xml
+
+
+----------------------------------------------
+Step 2: Erstelle ein Ranking der Nachrichten
+
+"02 Ranked Topics" erstelle hier eine Datei mit dem selben Namen und hier kommt das ergebnis rein wie relevant die einzelnen Meldungen sind. Also für jede Meldung machst du eine Internet Recherche wie stark das jeweilige Thema resonanz in den Medien und in den sozialen Medien gefunden hat. Für die Relevanz: Spielethemen etwas höher einordnen, Jubileen wie 10 Jahre Tiktok auch etwas höher einordnen, sowie Themen die eine langfristige Relevanz haben. Und schauen, welche Themen bereits dran waren im Podcast "03 Most Relevant Topics" und dann lieber neue Themen nehmen.
+
+
+----------------------------------------------
+Step 3: Wähle top 5 Themen aus
+Nimm die Themenwünsche aus Verzeichnis "02b Wished Topics" und wähle zusätzlich relevantesten Themen aus "02 Ranked Topics", so dass sich ingesamt 5 Themen ergeben und schreib sie in "03 Most Relevant Topics". Zu den Top Themen kommt noch das Intro hinzu.
+
+
+----------------------------------------------
+Step 4: Tiefe Recherche zu den ausgewählten Themen
+
+Recherche zu den top relevanten Themen und Intro. Es sollen Hintergrundinformationen gesammelt werden, änliche Meldungen durchforstet werden, schauen was es in der Historie schon alles ähnliches gab, usw. Das Ergebnis der Recherche mit Quellenangaben kommt in das Verzeichnis "04 Recherche" mit dem gleichen Dateinamen.
+
+
+----------------------------------------------
+Step 5: Erstelle Skript
+
+Schreibe das Script für den Podcast anhand "04 Recherche" und Charaktere.md und lege es ab in "05 Script". Die Gesamtzeit soll 30-35 Minuten sein (bis 40 Minuten behalten und nicht neu machen). Schaue dir auch alte Podcast scripte an und achte darauf, dass die beiden Moderatoren nicht immer den gleichen Spruch zu verwenden. Das Skript fängt immer mit einem Intro an, dass einen Pointe, einen Witz einen Twist enthalten sollte. Wie bei Folge 1, die Kamera in der Türklingel, die den Postboten als Familienmitglied erkennt oder in Folge 2 den Podcast umbenennen müssen.
+
+
+----------------------------------------------
+Step 6: Erstelle das Podcast mp3 mit Eleven Labs
+Erstelle das mp3 und lege es in dem Verzeichnis "09 Folgen" ab.
+
+
+----------------------------------------------
+Step 7: Upload to https://pro-und-contra-ki-und-it-news.pages.dev/
+
+----------------------------------------------
+Resume this session with:
+claude --resume b1670d19-7c08-4fdc-adb0-cbe53aa793f5
+d:\daten\development\Podcast\proUndContraKIundITnews>

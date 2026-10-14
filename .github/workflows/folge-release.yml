@@ -1,0 +1,157 @@
+# Legt eine fertige Folge als GitHub-Release ab und stellt sie auf pages.dev.
+#
+# Die Cloud-Routine darf selbst keine Releases anlegen (Sperre für Cloud-Sitzungen) und nicht auf Cloudflare Pages
+# hochladen (der Proxy ersetzt das Upload-Token von wrangler, Test 2026-10-08: 403). Sie pusht deshalb die Folge auf
+# einen Zweig folge/<datum> (Test: folge/<datum>-test), mit den Dateien in "09 Folgen/<datum>/" (per git add -f, der
+# Ordner steht in .gitignore). Dieser Workflow
+#   1. lädt alle Dateien darunter als Release-Assets hoch,
+#   2. baut Seite und Feed mit web/veroeffentlichen.py und deployt sie (Test: nur Vorschau unter
+#      routine-test.pro-und-contra-ki-und-it-news.pages.dev, die Live-Seite bleibt unberührt),
+#   3. schreibt web/folgen/<datum>.json (Feld „veroeffentlicht“) und web/src/audio_groessen.json zurück nach main,
+#   4. löscht den Zweig, damit die MP3 nicht dauerhaft im Repo liegt.
+#
+# Optional in "09 Folgen/<datum>/":
+#   titel.txt                 Titel des Releases (sonst „Folge vom TT.MM.JJJJ“)
+#   *_spotify.txt             wird als Beschreibung des Releases verwendet
+#   nicht-veroeffentlichen    nur Release, kein Deploy
+# Repo-Secret CLOUDFLARE_API_TOKEN (Cloudflare Pages: Bearbeiten) muss gesetzt sein, sonst entfällt der Deploy.
+name: Folge als Release ablegen und veröffentlichen
+
+on:
+  push:
+    branches: ["folge/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: folge-veroeffentlichen
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Daten der Folge
+        id: folge
+        run: |
+          zweig="${GITHUB_REF_NAME#folge/}"          # 2026-10-11 oder 2026-10-11-test
+          datum="${zweig:0:10}"
+          test=nein; [[ "$zweig" == *-test ]] && test=ja
+          ordner="09 Folgen/$datum"
+          [ -d "$ordner" ] || { echo "Ordner '$ordner' fehlt"; exit 1; }
+          { echo "zweig=$zweig"; echo "datum=$datum"; echo "test=$test"; echo "ordner=$ordner"; } >> "$GITHUB_OUTPUT"
+
+      - name: Release anlegen
+        env:
+          ZWEIG: ${{ steps.folge.outputs.zweig }}
+          DATUM: ${{ steps.folge.outputs.datum }}
+          TEST: ${{ steps.folge.outputs.test }}
+          ORDNER: ${{ steps.folge.outputs.ordner }}
+        run: |
+          set -euo pipefail
+          tag="folge-$ZWEIG"
+          vorab=(); [ "$TEST" = ja ] && vorab=(--prerelease)
+
+          titel="Folge vom ${DATUM:8:2}.${DATUM:5:2}.${DATUM:0:4}"
+          [ -f "$ORDNER/titel.txt" ] && titel="$(head -n 1 "$ORDNER/titel.txt")"
+          [ "$TEST" = ja ] && titel="$titel (Test)"
+
+          notizen="$(mktemp)"
+          spotify="$(find "$ORDNER" -name '*_spotify.txt' | head -n 1)"
+          if [ -n "$spotify" ]; then cp "$spotify" "$notizen"; else echo "Folge vom $DATUM" > "$notizen"; fi
+
+          mapfile -t dateien < <(find "$ORDNER" -type f ! -name titel.txt ! -name nicht-veroeffentlichen | sort)
+          printf 'Asset: %s\n' "${dateien[@]}"
+
+          # Release-Tag auf main setzen, nicht auf den Folgen-Commit: so wird die MP3 nach dem Löschen
+          # des Zweigs unerreichbar und bläht das Repo nicht auf
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "${dateien[@]}" --clobber
+          else
+            gh release create "$tag" "${dateien[@]}" --target main --title "$titel" --notes-file "$notizen" "${vorab[@]}"
+          fi
+          gh release view "$tag" --json url,assets --jq '.url, (.assets[] | "\(.name) \(.size)")'
+
+      - name: Seite bauen und deployen
+        if: ${{ !cancelled() }}
+        env:
+          DATUM: ${{ steps.folge.outputs.datum }}
+          TEST: ${{ steps.folge.outputs.test }}
+          ORDNER: ${{ steps.folge.outputs.ordner }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 72b6b68e3d4619cc8315471dd1b638ea
+          npm_config_yes: "true"
+        run: |
+          set -euo pipefail
+          if [ -f "$ORDNER/nicht-veroeffentlichen" ]; then echo "nicht-veroeffentlichen liegt bei: kein Deploy"; exit 0; fi
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "::warning::Secret CLOUDFLARE_API_TOKEN fehlt: kein Deploy"; exit 0; fi
+          # beim Einfügen ins Secret-Feld rutschen leicht Zeilenumbruch, Leerzeichen oder „Bearer “ mit hinein
+          roh="$CLOUDFLARE_API_TOKEN"
+          token="$(printf '%s' "$roh" | tr -d '[:space:]"')"
+          token="${token#Bearer}"
+          token="${token#bearer}"
+          # Merkmale zur Fehlersuche, nie den Token selbst: Länge und welche Sonderzeichen vorkommen
+          echo "Token: Länge roh ${#roh}, bereinigt ${#token}; Sonderzeichen: '$(printf '%s' "$token" | tr -d 'A-Za-z0-9_-' | fold -w1 | sort -u | tr -d '\n')'"
+          export CLOUDFLARE_API_TOKEN="$token"
+          # ffmpeg als statische Datei: apt-get brauchte auf dem Runner 13 Minuten
+          curl -sSfL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar -xJ -C /tmp
+          export PATH="$(echo /tmp/ffmpeg-*-static):$PATH"
+          ffmpeg -version | head -n 1
+
+          mkdir -p tts/out web/public/werbung
+          # neue Folge (nur wenn ihre Webdaten schon auf main liegen; beim Test meist nicht)
+          if [ -f "web/folgen/$DATUM.json" ]; then
+            for f in "$ORDNER"/elevenlabs/"${DATUM}"_elevenlabs*; do
+              cp "$f" "tts/out/$(basename "$f" | sed "s/_elevenlabs//")"
+            done
+          fi
+          # alte Folgen und Werbevideos von der Live-Seite (ein Deploy ersetzt die ganze Seite)
+          B=https://pro-und-contra-ki-und-it-news.pages.dev
+          for j in web/folgen/*.json; do
+            d=$(basename "$j" .json); [ "$d" = "$DATUM" ] && continue
+            curl -sSfo "tts/out/$d.mp3" "$B/audio/$d.mp3"
+            curl -sSfo "tts/out/${d}_kapitel.json" "$B/kapitel/$d.json"
+            curl -sSfo "tts/out/${d}_transkript.json" "$B/transkript/$d.json"
+            curl -sSfo "tts/out/${d}_transkript.vtt" "$B/transkript/$d.vtt"
+          done
+          for v in spot_ki_stimmen spot_luegendetektor spot_zwei_meinungen; do
+            curl -sSfo "web/public/werbung/$v.mp4" "$B/werbung/$v.mp4"
+          done
+          ls -l tts/out web/public/werbung
+
+          if [ "$TEST" = ja ]; then
+            python3 web/veroeffentlichen.py --nur-bauen
+            echo "Testlauf $(date -u '+%F %T') UTC" > web/public/routine-test.txt
+            (cd web && npx wrangler pages deploy --project-name pro-und-contra-ki-und-it-news --branch routine-test --commit-dirty=true)
+            echo "Vorschau: https://routine-test.pro-und-contra-ki-und-it-news.pages.dev/"
+          else
+            python3 web/veroeffentlichen.py
+            curl -sSf "$B/feed.xml" | grep -c "<item>"
+          fi
+
+      - name: Änderungen nach main zurückschreiben
+        if: ${{ steps.folge.outputs.test == 'nein' }}
+        env:
+          DATUM: ${{ steps.folge.outputs.datum }}
+        run: |
+          set -euo pipefail
+          [ -f "web/folgen/$DATUM.json" ] || exit 0
+          cp "web/folgen/$DATUM.json" /tmp/folge.json
+          cp web/src/audio_groessen.json /tmp/audio_groessen.json
+          git fetch -q origin main
+          git checkout -q -B zurueck origin/main
+          cp /tmp/folge.json "web/folgen/$DATUM.json"
+          cp /tmp/audio_groessen.json web/src/audio_groessen.json
+          git add "web/folgen/$DATUM.json" web/src/audio_groessen.json
+          if git diff --cached --quiet; then echo "nichts zu schreiben"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Folge $DATUM veröffentlicht"
+          git push origin HEAD:main
+
+      - name: Zweig löschen          # nur bei Erfolg; sonst bleibt er für „Re-run“ im Actions-Tab
+        run: git push origin --delete "$GITHUB_REF_NAME"

@@ -1,0 +1,162 @@
+{
+  "nummer": 2,
+  "youtube": "ZZQCzt9_uEw",
+  "titel": "KI-Abkommen ohne Strafen, KI-Lügendetektor, Project Meridian, BMW spart mit KI und OpenAI Dots",
+  "kurz": "Sechs KI-Konzerne versprechen im Weißen Haus, sich selbst zu kontrollieren. Das Pentagon will einen Lügendetektor mit KI entwickeln und lässt Elon Musk und Palmer Luckey die Kriegführung der Zukunft ausloten. BMW plant ein kompaktes Elektroauto und streicht Führungsebenen, und OpenAI stellt Agenten vor, die nie schlafen.",
+  "kapitel": [
+    {
+      "text": "Herr Sommers Kühlschrank hat sich nach einem Update selbst befördert, und das passt zur Woche: Präsident Trump lässt künstliche Intelligenz in den Bundesbehörden per Erlass „Superintelligenz“ nennen. Dazu der Überblick über die Themen der Woche.",
+      "links": [
+        [
+          "The White House: Inaugurating the Era of Super Intelligence",
+          "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/"
+        ],
+        [
+          "Newsweek: Rechtschreibfehler im Super-Intelligence-Dokument",
+          "https://www.newsweek.com/trumps-super-intelligence-document-spelling-mistake-12505322"
+        ],
+        [
+          "Ars Technica: Owners mourn spoiled food after firmware update bricks Samsung smart fridges",
+          "https://arstechnica.com/gadgets/2026/09/owners-mourn-spoiled-food-after-firmware-update-bricks-samsung-smart-fridges/"
+        ],
+        [
+          "dts: Bundesregierung will am Begriff „künstliche Intelligenz“ festhalten",
+          "https://www.finanznachrichten.de/nachrichten-2026-09/69655840-bundesregierung-will-am-begriff-kuenstliche-intelligenz-festhalten-003.htm"
+        ]
+      ]
+    },
+    {
+      "text": "Sechs KI-Firmen unterschreiben im Weißen Haus eine Seite Papier: interne Kontrollen, ein eigenes Team, ein externer Prüfer und ein Ausschuss im Verwaltungsrat. Strafen gibt es keine. Reicht Selbstkontrolle, oder braucht es ein Gesetz? Mit Asilomar 1975, dem Hays Code, der FSK und der Frage, was aus den freiwilligen Zusagen von 2023 wurde.",
+      "links": [
+        [
+          "heise online: Trump – KI-Firmen sollen sich selbst beaufsichtigen",
+          "https://www.heise.de/news/Trump-KI-Firmen-sollen-sich-selbst-beaufsichtigen-11470445.html"
+        ],
+        [
+          "heise online: KI-Regeln – Trump und Tech-Riesen unterschreiben gemeinsame Erklärung",
+          "https://www.heise.de/news/Gemeinsame-Erklaerung-Trump-und-Tech-Riesen-definieren-KI-Regeln-11472591.html"
+        ],
+        [
+          "Washington Examiner: Volltext des White House Accord on Super Intelligence",
+          "https://www.washingtonexaminer.com/news/white-house/4747747/full-trump-white-house-accord-ai-super-intelligence/"
+        ],
+        [
+          "NPR: Trump says AI companies should self-police",
+          "https://www.npr.org/2026/09/30/nx-s1-5985699/trump-self-police-ai-development"
+        ],
+        [
+          "Wang, Huang, Klyman, Bommasani u. a.: Studie zu den freiwilligen Zusagen von 2023 (arXiv)",
+          "https://arxiv.org/abs/2508.08345"
+        ]
+      ]
+    },
+    {
+      "text": "Die Pentagon-Behörde DCSA beantragt rund 30 Millionen Dollar für „Polygraph Next“: einen Lügendetektor, der Körpersignale auf Abstand misst und dessen Auswertung eine KI übernimmt. Dazu hundert Jahre Lügendetektor, von John Larson 1921 über Wonder Woman bis Aldrich Ames, und das Rechenbeispiel des Nationalen Forschungsrats der USA.",
+      "links": [
+        [
+          "heise online: Pentagon will 30 Millionen Dollar für KI-Lügendetektor ausgeben",
+          "https://www.heise.de/news/Pentagon-will-30-Millionen-Dollar-fuer-KI-Luegendetektor-ausgeben-11470046.html"
+        ],
+        [
+          "MIT Technology Review: The Pentagon wants $30 million to build an AI-powered lie detector",
+          "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+        ],
+        [
+          "Haushaltsbegründung der DCSA für 2027 (PDF)",
+          "https://comptroller.war.gov/Portals/45/Documents/defbudget/FY2027/budget_justification/pdfs/03_RDT_and_E/RDTE_DCSA_PB_2027.pdf"
+        ],
+        [
+          "National Research Council: The Polygraph and Lie Detection (2003)",
+          "https://www.nationalacademies.org/read/10420/chapter/2"
+        ],
+        [
+          "The Intercept: We Tested Europe's New Lie Detector for Travelers",
+          "https://theintercept.com/2019/07/26/europe-border-control-ai-lie-detector/"
+        ]
+      ]
+    },
+    {
+      "text": "US-Kriegsminister Pete Hegseth kündigt Project Meridian an: Elon Musk, Palmer Luckey und Newt Gingrich sollen in 120 Tagen beschreiben, wie Kriege künftig geführt werden. Dürfen Lieferanten ihren Kunden beraten? Mit Eisenhowers Warnung von 1961, dem Drohnenangriff von Saporischschja und dem Blendlaser-Verbot von 1995.",
+      "links": [
+        [
+          "heise online: Elon Musk und Palmer Luckey loten Kriegführung der Zukunft für das Pentagon aus",
+          "https://www.heise.de/news/Elon-Musk-und-Palmer-Luckey-loten-Kriegfuehrung-der-Zukunft-fuer-das-Pentagon-aus-11471974.html"
+        ],
+        [
+          "U.S. Department of War: Secretary Hegseth Announces Six Major Initiatives at Quantico Speech",
+          "https://www.war.gov/News/Releases/Release/Article/4615424/secretary-hegseth-announces-six-major-initiatives-at-quantico-speech/"
+        ],
+        [
+          "Politico: Musk-led war commission triggers alarms in Pentagon",
+          "https://www.politico.com/news/2026/10/02/pentagon-hegseth-musk-palmer-commission-01104908"
+        ],
+        [
+          "The New York Times: A Drone Killed Three Ukrainians. It Was Guided Entirely by A.I.",
+          "https://www.nytimes.com/2026/08/24/world/europe/russia-drones-autonomous-ai-kill-ukraine-war.html"
+        ],
+        [
+          "The Washington Post: U.S., Russia stripped human oversight from global AI weapons pact",
+          "https://www.washingtonpost.com/technology/2026/09/26/how-us-russia-weakened-global-effort-regulate-killer-ai/"
+        ]
+      ]
+    },
+    {
+      "text": "BMW stellt beim Kapitalmarkttag seinen Umbau vor: weniger Modelle, ein kompaktes Elektroauto für 2028 und 20 Prozent weniger Bereiche samt Führungsfunktionen. Agentische KI soll dabei ein „Gamechanger“ sein. Technik oder Etikett für ein Sparprogramm? Mit Halle 54 bei Volkswagen, dem Werk Debrecen und den Zulassungszahlen vom August.",
+      "links": [
+        [
+          "heise online: BMW kürzt Modellpalette und setzt KI für höhere Profitabilität ein",
+          "https://www.heise.de/news/BMW-kuerzt-Modellpalette-und-setzt-KI-fuer-hoehere-Profitabilitaet-ein-11472601.html"
+        ],
+        [
+          "BMW Group: Agilität, Effizienz, KI-basierte Innovationen (Pressemitteilung zum Kapitalmarkttag)",
+          "https://www.press.bmwgroup.com/deutschland/article/detail/T0461228DE/agilitaet-effizienz-ki-basierte-innovationen:-bmw-group-stellt-weichen-fuer-mehr-profitabilitaet-und-resilienz"
+        ],
+        [
+          "Kraftfahrt-Bundesamt: Fahrzeugzulassungen im August 2026",
+          "https://www.kba.de/DE/Presse/Pressemitteilungen/Fahrzeugzulassungen/2026/pm35_2026_n_08_26_pm_komplett.html"
+        ],
+        [
+          "IG Metall Bayern: Aktionstag am 21. September",
+          "https://bayern.igmetall.de/2026/aktionstag-am-21-september-in-ueber-50-bayerischen-betrieben-der-auto-und-zulieferindustrie"
+        ],
+        [
+          "Fortune: CEOs blame AI for layoffs, but an MIT professor says it fits a long pattern",
+          "https://fortune.com/2026/05/31/tech-companies-ai-washing-layoffs-wix-block-snap-atlassian-disposable-workers/"
+        ],
+        [
+          "Wikipedia: Halle 54",
+          "https://de.wikipedia.org/wiki/Halle_54"
+        ]
+      ]
+    },
+    {
+      "text": "OpenAI stellt Dots vor: persönliche KI-Agenten, die dauerhaft laufen und einen eigenen Computer in der Cloud haben. Was die Systemkarte über Angriffsmails, Verbote und lange Aufgaben verrät, warum es der dritte Anlauf in 20 Monaten ist und weshalb Herr Mondschein verdächtig gut Bescheid weiß.",
+      "links": [
+        [
+          "heise online: OpenAI startet Dots – dauerhaft aktive KI-Agenten mit eigenem Cloud-Computer",
+          "https://www.heise.de/news/OpenAI-startet-Dots-Dauerhaft-aktive-KI-Agenten-mit-eigenem-Cloud-Computer-11470469.html"
+        ],
+        [
+          "OpenAI: Introducing dots",
+          "https://openai.com/index/introducing-dots/"
+        ],
+        [
+          "OpenAI: How we build safety, security and privacy into dots",
+          "https://openai.com/index/how-we-build-safety-security-and-privacy-into-dots/"
+        ],
+        [
+          "heise online: OpenAI streicht Veröffentlichung von GPT-6.1 Astra",
+          "https://www.heise.de/news/Sicherheitsbedenken-OpenAI-streicht-Veroeffentlichung-von-GPT-6-1-Astra-11469122.html"
+        ],
+        [
+          "Hacker News: Dots – Always-on agents",
+          "https://news.ycombinator.com/item?id=49896604"
+        ]
+      ]
+    },
+    {
+      "text": "Sommers Sonnenseite, Mondscheins Nachtgedanke und die Verabschiedung."
+    }
+  ],
+  "veroeffentlicht": "2026-10-04T13:24:28+00:00"
+}

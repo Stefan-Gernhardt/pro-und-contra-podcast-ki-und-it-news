@@ -1,0 +1,8 @@
+{
+  // Alter Worker unter pro-und-contra.peterschmidtshopping.workers.dev – nur noch Weiterleitung auf Pages.
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "pro-und-contra",
+  "main": "index.js",
+  "compatibility_date": "2026-09-28",
+  "workers_dev": true
+}

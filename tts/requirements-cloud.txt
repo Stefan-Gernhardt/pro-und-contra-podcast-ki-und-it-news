@@ -1,0 +1,11 @@
+# Pakete für das Rendern in der Cloud-Routine (nur CPU): python3 -m pip install --use-pep517 -r tts/requirements-cloud.txt
+# (--use-pep517: sonst scheitert docopt, eine Abhängigkeit von num2words, am Debian-setuptools der Cloud)
+# torch/transformers braucht es dort nicht, Ohr nimmt ohne GPU faster-whisper (render_gemini.py)
+numpy
+librosa
+pyloudnorm
+soundfile
+num2words
+elevenlabs
+faster-whisper
+Pillow

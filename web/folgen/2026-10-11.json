@@ -1,0 +1,182 @@
+{
+  "nummer": 3,
+  "youtube": "7OlooUMAWn4",
+  "titel": "OpenAI-Mathematik ohne Prüfer, Junior-Entwickler, humanoide Roboter, Homeoffice-Rückruf und Google Playground",
+  "kurz": "OpenAI veröffentlicht über 700 KI-generierte Mathematik-Manuskripte, und die Mathematiker fragen, wer das alles prüfen soll. Dazu drei Wunschthemen: Wer stellt noch junge Softwareentwickler ein, wo stehen humanoide Roboter in deutschen Fabriken, und warum rufen Konzerne wie Mercedes ins Büro zurück, während die Homeoffice-Quote stillsteht? Zum Schluss baut Google mit Playground Spiele aus einem Satz.",
+  "kapitel": [
+    {
+      "text": "Herr Sommer ertappt Herrn Mondschein beim Beschimpfen von Claude, und das passt zur Woche: Anthropic verbietet ab 12. November „anhaltendes und unnötiges beleidigendes oder grausames Verhalten“ gegenüber seinen Modellen. Dazu der Überblick über die Themen der Woche.",
+      "links": [
+        [
+          "heise online: Anthropic – Nutzer dürfen Claude nun nicht mehr grundlos beleidigen",
+          "https://www.heise.de/news/Anthropic-Nutzer-duerfen-Claude-nun-nicht-mehr-grundlos-beleidigen-11478189.html"
+        ],
+        [
+          "Anthropic: 2026 Usage Policy Update",
+          "https://www.anthropic.com/news/2026-usage-policy-update"
+        ],
+        [
+          "The Verge: Anthropic bans 'abusive or cruel behavior' toward Claude",
+          "https://www.theverge.com/ai-artificial-intelligence/1008100/anthropic-new-usage-policy-abuse-claude"
+        ],
+        [
+          "Dobariya/Kumar: Mind Your Tone – Studie zu Höflichkeit und Antwortqualität (arXiv)",
+          "https://arxiv.org/abs/2510.04950"
+        ],
+        [
+          "Hacker News: Anthropic bans 'abusive or cruel behavior' towards Claude",
+          "https://news.ycombinator.com/item?id=50008565"
+        ]
+      ]
+    },
+    {
+      "text": "OpenAI legt 722 KI-generierte Mathematik-Manuskripte zu rund 4.000 Problemen frei, nimmt drei nach einem Tag zurück und nennt weder Modell noch Autoren. Mathematiker gründen eine „Association for Human Mathematics“ und fragen, wer das alles prüfen soll. Mit dem Vier-Farben-Satz von 1976, Ramanujans Brief an Hardy und einem Navier-Stokes-Beweis, der in der Übersetzung verloren ging.",
+      "links": [
+        [
+          "heise online: OpenAI veröffentlicht hunderte KI-generierte Lösungen für Mathematikprobleme",
+          "https://www.heise.de/news/OpenAI-Hunderte-weitere-KI-generierte-Loesungen-fuer-Mathematikprobleme-11478615.html"
+        ],
+        [
+          "heise online: KI-generierte Mathematiklösungen – Scharfe Kritik am Vorgehen von OpenAI",
+          "https://www.heise.de/news/KI-generierte-Mathematikloesungen-Scharfe-Kritik-am-Vorgehen-von-OpenAI-11480767.html"
+        ],
+        [
+          "OpenAI: Sharing AI progress in mathematics",
+          "https://openai.com/index/sharing-ai-progress-in-mathematics/"
+        ],
+        [
+          "GitHub: openai/math (Manuskripte, Versionshistorie, Lizenz)",
+          "https://github.com/openai/math"
+        ],
+        [
+          "Association for Human Mathematics: Statement on OpenAI's October 6 Release",
+          "https://www.ahmath.org/statements"
+        ],
+        [
+          "Bastounis/Circelli/Hansen: OpenAI mistranslated mathematics into code for its Navier-Stokes proof (arXiv)",
+          "https://arxiv.org/abs/2610.08144"
+        ]
+      ]
+    },
+    {
+      "text": "Einstiegsstellen in der Softwareentwicklung liegen in Deutschland 70 Prozent unter 2019, die IT-Arbeitslosigkeit steigt, und Konzernchefs kündigen an, keine Junioren mehr einzustellen. Ist das die KI oder die Konjunktur? Mit der Stanford-Studie zu den „Kanarienvögeln“, dem Dotcom-Crash, dem METR-Experiment und Grace Hoppers Streit um die „automatische Programmierung“.",
+      "links": [
+        [
+          "Indeed Hiring Lab: Berufseinstieg – Stellenangebot sinkt, Ausbildungssystem bietet einen Anker",
+          "https://hiringlab.indeed.com/de/blog/2026/09/23/berufseinstieg-stellenangebot-sinkt-ausbildungssystem-bietet-einen-anker/"
+        ],
+        [
+          "Bundesagentur für Arbeit: Arbeitsmarkt in der IKT im Spannungsfeld – konjunkturelle Schwäche trifft auf strukturellen Wandel",
+          "https://www.arbeitsagentur.de/presse/2026-24-arbeitsmarkt-in-der-informations-und-kommunikationstechnik-ikt-im-spannungsfeld-konjunkturelle-schwaeche-trifft-auf-strukturellen-wandel"
+        ],
+        [
+          "Bitkom Research: Der Arbeitsmarkt für IT-Fachkräfte 2026 (PDF)",
+          "https://www.bitkom.org/sites/main/files/2026-09/bitkom-studienbericht-arbeitsmarkt-it-fachkraefte-2026.pdf"
+        ],
+        [
+          "Brynjolfsson/Chandar/Chen: Canaries in the Coal Mine (Stanford Digital Economy Lab, PDF)",
+          "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf"
+        ],
+        [
+          "METR: Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+          "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+        ],
+        [
+          "heise online: Deutsche Telekom will durch KI-Einsatz Milliarden sparen",
+          "https://www.heise.de/news/Deutsche-Telekom-will-durch-KI-Einsatz-Milliarden-sparen-11475717.html"
+        ]
+      ]
+    },
+    {
+      "text": "Robco aus München wird zum Einhorn, Neura sammelt bis zu 1,4 Milliarden Dollar ein, und Schaeffler, Mercedes, BMW und Rossmann testen humanoide Roboter. Doch die Zahl der Maschinen bleibt einstellig, Figure schmilzt seine erste Flotte ein, und BMW sagt: noch langsamer als Menschen. Mit dem Schachtürken von 1770, dem Pekinger Halbmarathon und der Frage, ob der Roboter Beine braucht.",
+      "links": [
+        [
+          "heise online: Deutsches Robotik-Startup Robco wird zum Einhorn",
+          "https://www.heise.de/news/Deutsches-Robotik-Startup-Robco-wird-zum-Einhorn-11476815.html"
+        ],
+        [
+          "Sequoia Capital: The Freestyle Skier Designing Germany's Robotic Workforce",
+          "https://sequoiacap.com/article/robco-spotlight"
+        ],
+        [
+          "heise online: Schaeffler setzt humanoide Roboter von Neura Robotics ein und liefert Teile",
+          "https://heise.de/-11068017"
+        ],
+        [
+          "heise online: Arnold Schwarzenegger, humanoide F.02 und ein Hochofen – Figure entsorgt Roboter",
+          "https://www.heise.de/news/Arnold-Schwarzenegger-humanoide-F-02-und-ein-Hochofen-Figure-entsorgt-Roboter-11472119.html"
+        ],
+        [
+          "Carscoops: Walking, Talking Factory Robots Are Here, But Humans Are Still Faster. For Now",
+          "https://www.carscoops.com/2026/08/automakers-humanoid-robots-factory/"
+        ],
+        [
+          "ingenieur.de: Fraunhofer IPA analysiert Potenzial humanoider Robotik",
+          "https://www.ingenieur.de/fachmedien/konstruktion/produktentwicklung/fraunhofer-ipa-analysiert-potenzial-humanoider-robotik/"
+        ]
+      ]
+    },
+    {
+      "text": "Ein Viertel der Erwerbstätigen arbeitet zumindest zeitweise von zu Hause, und die Quote rührt sich seit Jahren nicht. Trotzdem kündigt Mercedes die Betriebsvereinbarung und ruft ab 2027 vier Tage ins Büro, während SAP nach zwei Jahren Streit bei zwei Homeoffice-Tagen bleibt. Was die Forschung zu Rückrufen sagt, mit Yahoo 2013, IBM 2017, dem Trip.com-Experiment aus Nature und Mondscheins Dilemma zwischen Datenschutz und Sicherheit.",
+      "links": [
+        [
+          "Statistisches Bundesamt: Homeoffice (Qualität der Arbeit)",
+          "https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Qualitaet-Arbeit/Dimension-3/home-office.html"
+        ],
+        [
+          "quasa.io: Homeoffice bleibt bei 24,9 Prozent – ein Rückruftrend ist nicht erkennbar (ifo)",
+          "https://quasa.io/de/media/homeoffice-bleibt-bei-249-prozent-ein-rueckruftrend-ist-nicht-erkennbar"
+        ],
+        [
+          "Autohaus.de/dpa: Home Office adé – Mercedes-Benz will mehr Beschäftigte im Büro",
+          "https://www.autohaus.de/nachrichten/autohersteller/home-office-ad-mercedes-benz-will-beschaeftigte-im-buero-3910312"
+        ],
+        [
+          "heidelberg24: SAP-Geschäftsführung und Betriebsrat einigen sich auf neue Homeoffice-Regelung",
+          "https://www.heidelberg24.de/region/sap-geschaeftsfuehrung-betriebsrat-einigen-sich-neue-homeoffice-regelung-walldorf-93633450.html"
+        ],
+        [
+          "Bloom/Han/Liang: Hybrid working from home improves retention without damaging performance (Nature 2024)",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11208135/"
+        ],
+        [
+          "Techniker Krankenkasse/Fraunhofer IAO: Studie – im Homeoffice produktiver",
+          "https://www.tk.de/presse/themen/praevention/gesundheitsstudien/studie-homeoffice-produktiver-2212078"
+        ]
+      ]
+    },
+    {
+      "text": "Google startet Playground: Ein Satz genügt, und Gemini baut ein Browserspiel, Unity Spark soll folgen. Die Tester sehen vor allem Vollbild-Werbung für die Nachtmodus-Idee, die Spieleentwickler nach zwei Entlassungswellen eine neue Flut. Mit Counter-Strike und DotA als Mods, dem Atari-Crash von 1983 und der Frage, wem ein Spiel gehört, das aus einem Prompt entstand.",
+      "links": [
+        [
+          "heise online: Prompt rein, Spiel an – Google startet KI-Spielebaukasten Playground",
+          "https://www.heise.de/news/Prompt-rein-Spiel-an-Google-startet-KI-Spielebaukasten-Playground-11480456.html"
+        ],
+        [
+          "Google Blog: Introducing Playground – Create and play custom games",
+          "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/"
+        ],
+        [
+          "The Verge: Google now lets you make games with AI",
+          "https://www.theverge.com/tech/1006477/google-playground-unity-spark-ai"
+        ],
+        [
+          "Google: Playground Additional Terms of Service",
+          "https://playground.google/terms"
+        ],
+        [
+          "Hacker News: Google Playground",
+          "https://news.ycombinator.com/item?id=49991823"
+        ],
+        [
+          "GDC: State of the Game Industry 2026 – Auswirkungen von Entlassungen und generativer KI",
+          "https://gdconf.com/article/gdc-2026-state-of-the-game-industry-reveals-impact-of-layoffs-generative-ai-and-more/"
+        ]
+      ]
+    },
+    {
+      "text": "Sommers Sonnenseite, Mondscheins Nachtgedanke und die Verabschiedung."
+    }
+  ],
+  "veroeffentlicht": "2026-10-11T13:09:38+00:00"
+}
